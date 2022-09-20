@@ -11,6 +11,20 @@
     - average([1, '2']) // Retorno: undefined;;
 */
 
-const average = () => {};
+const average = (arrays) => {
+  const tamNumbers = arrays.length;
+  let total = 0;
+
+  if (arrays.length === 0) {
+    return undefined;
+  }
+  for (let index = 0; index < arrays.length; index += 1) {
+    if (typeof arrays[index] !== 'number') {
+      return undefined;
+    }
+    total += arrays[index];
+  }
+  return Math.round(total / tamNumbers);
+};
 
 module.exports = average;
