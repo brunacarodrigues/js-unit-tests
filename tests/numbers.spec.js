@@ -18,12 +18,12 @@ const assert = require('assert');
 describe('#numbers', () => {
   it('Verifica se a função `numbers` retorna `true` quando o array contém apenas números e falso caso contrário', () => {
     // Escreva um teste em que a função recebe [1, 2, 3, 4, 5] e retorna true
-    assert.strictEqual(numbers([1, 2, 3, 4, 5]), true);
+    expect(numbers([1, 2, 3, 4, 5])).toEqual(true);
     // Escreva um teste em que a função recebe [1, 2, '3', 4, 5] e retorna false
-    assert.strictEqual(numbers([1, 2, "3", 4, 5]), false);
+    expect(numbers([1, 2, "3", 4, 5])).toEqual(false);
     // Escreva um teste em que a função recebe [1, 'a', 3] e retorna false
-    assert.strictEqual(numbers([1, "a", 3]), false);
+    expect(numbers([1, "a", 3])).toEqual(false);
     // Escreva um teste em que a função recebe [' '] e retorna false
-    assert.strictEqual(numbers([" "]), false);
+    expect(numbers([" "])).toEqual(false);
   });
 });

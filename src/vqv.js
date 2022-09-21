@@ -19,9 +19,9 @@
 */
 
 const vqv = (nome, idade) => {
-  const checkConst = nome === undefined && idade === undefined;
-  if (checkConst) return undefined;
-  return `Oi, meu nome é ${nome}!
+  if (nome === undefined && idade === undefined) {
+    return undefined;
+  } return `Oi, meu nome é ${nome}!
   Tenho ${idade} anos,
   trabalho na Trybe e mando muito em programação!
   #VQV!`;
